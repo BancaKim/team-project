@@ -2,6 +2,8 @@
     <main>
         <div class="container py-4">
             <PostCreate @create-post="createPost"></PostCreate>
+            
+            <hr class="my-4">
             <div class="row g-5">
                 <div v-for="post in posts" :key="post.id" class="col col-4">
                     <AppCard :title="post.title" :contents="post.contents" :type="post.type" :is-like="post.isLike"

@@ -1,17 +1,15 @@
 <template>
     <div class="row">
         <div class="col col-2">
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <select v-model="type" class="form-select" aria-label="Default select example">
+                <option value="electronic">전자기기</option>
+                <option value="clothes">옷</option>
             </select>
         </div>
         <div class="col col-8">
             <input v-model="title" type="text" class="form-control">
         </div>
-        <div class="col col-2">
+        <div class="col col-2 d-grid">
             <!-- <button class="btn btn-primary" @click="$emit('createPost',1,2,3, '김길동')">button</button> -->
             <button class="btn btn-primary" @click="createPost">button</button>
         </div>
@@ -34,11 +32,16 @@ import {ref} from 'vue';
         },
         setup(props, {emit}){
             // context.emit
+            const type = ref('news');
             const title = ref('');
             const createPost=()=>{
-                emit('createPost',title.value);
+                const newPost = {
+                    type: type.value,
+                    title: title.value
+                }
+                emit('createPost',newPost);
             };
-        return {createPost, title};
+        return {createPost,type, title};
     },
 };
 </script>
