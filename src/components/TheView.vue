@@ -35,8 +35,9 @@
                 { id: 5, title: '스투시 반팔티', contents: '30만원', isLike: false, type: 'clothes' },
                 { id: 6, title: '꼼데가르숑 가디건', contents: '30만원', isLike: false, type: 'clothes' }
             ]);
-            const createPost=()=>{
+            const createPost=(newTitle)=>{
                 console.log('createPost');
+                console.log('newtitle: ', newTitle);
             };
             return {post, posts, createPost};
         },

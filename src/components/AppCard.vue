@@ -42,7 +42,7 @@ import {computed} from '@vue/reactivity';
         },
     emits: ['toggleLike'],
         setup(props, context){
-            console.log('props.title ', props.title);
+            // console.log('props.title ', props.title);
             const isLikeClass = computed(() => props.isLike? 'btn-danger' : 'btn-outline-danger');
             const typeName = computed(()=>props.type === 'electronic' ? '전자기기' : '옷');
             const toggleLike=()=>{
