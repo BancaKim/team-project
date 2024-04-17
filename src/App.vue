@@ -1,22 +1,12 @@
 <template>
-<div>
-  <TheNav></TheNav>
+  <TheHeader></TheHeader>
   <TheView></TheView>
-</div>
 </template>
 
-<script>
-import TheNav from './components/TheNav.vue'
-import TheView from './components/TheView.vue'
-export default {
-  name: 'App',
-  components: {
-    TheNav,
-    TheView
-  }
-}
+<script setup>
+import TheHeader from '@/layouts/TheHeader.vue';
+import TheView from '@/layouts/TheView.vue';
 </script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -24,6 +14,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

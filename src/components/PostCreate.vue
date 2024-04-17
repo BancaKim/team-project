@@ -17,35 +17,33 @@
 </template>
 
 <script>
-import {ref} from 'vue';
+import { ref } from 'vue';
 
-    export default {
-        // emits:['createPost'],
-        emits: {
-            createPost: newTitle=>{
-                console.log('validator:', newTitle);
-                if (!newTitle) {
-                    return false;
-                }
-                return true;
-            },
+export default {
+    // emits:['createPost'],
+    emits: {
+        createPost: newTitle => {
+            console.log('validator:', newTitle);
+            if (!newTitle) {
+                return false;
+            }
+            return true;
         },
-        setup(props, {emit}){
-            // context.emit
-            const type = ref('news');
-            const title = ref('');
-            const createPost=()=>{
-                const newPost = {
-                    type: type.value,
-                    title: title.value
-                }
-                emit('createPost',newPost);
-            };
-        return {createPost,type, title};
+    },
+    setup(props, { emit }) {
+        // context.emit
+        const type = ref('news');
+        const title = ref('');
+        const createPost = () => {
+            const newPost = {
+                type: type.value,
+                title: title.value
+            }
+            emit('createPost', newPost);
+        };
+        return { createPost, type, title };
     },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

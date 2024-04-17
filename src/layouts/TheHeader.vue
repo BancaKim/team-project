@@ -11,10 +11,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <router-link class="nav-link active" to="/">Home</router-link>
+                            <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <router-link class="nav-link" to="/about">About</router-link>
+                            <!-- <a class="nav-link" href="#">Link</a> -->
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/posts">우리동네</router-link>
+                            <!-- <a class="nav-link" href="#">Link</a> -->
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -38,16 +44,21 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
+                    <!-- <div class="d-flex" role="search">
+                        <button class="btn btn-outline-success" type="button" @click="goPage">글쓰기</button>
+                     </div> -->
                 </div>
             </div>
         </nav>
     </div>
 </template>
 
-<script>
-    export default {
-        
-    }
+<script setup>
+// import {useRouter} from 'vue-router';
+// const router = useRouter()
+// const goPage=()=>{
+//     router.push('/posts/create');
+// };
 </script>
 
 <style scoped>
