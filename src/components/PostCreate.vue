@@ -22,9 +22,11 @@ import {ref} from 'vue';
     export default {
         // emits:['createPost'],
         emits: {
-            createPost: newTitle=>{
-                console.log('validator:', newTitle);
-                if (!newTitle) {
+            createPost: newPost =>{
+                console.log('validator:', newPost);
+                if (!newPost.type) {
+                    return false;
+                } else if(!newPost.title){
                     return false;
                 }
                 return true;
@@ -32,7 +34,7 @@ import {ref} from 'vue';
         },
         setup(props, {emit}){
             // context.emit
-            const type = ref('news');
+            const type = ref('electronic');
             const title = ref('');
             const createPost=()=>{
                 const newPost = {
@@ -40,8 +42,10 @@ import {ref} from 'vue';
                     title: title.value
                 }
                 emit('createPost',newPost);
+                type.value = 'news';
+                title.value = "";
             };
-        return {createPost,type, title};
+        return {createPost, type, title};
     },
 };
 </script>

@@ -10,16 +10,20 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
+                    <!-- <ul class="navbar-nav justify-content-center"> -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">홈</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">동네생활</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">내근처</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Dropdown
+                                나의당근
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
@@ -51,7 +55,12 @@
 </script>
 
 <style scoped>
-.nav.navbar.navbar-expand-sm.navbar-dark.bg-primary {
-    background-color: orange;
+.navbar {
+    background-color: orange !important;
+}
+
+li.nav-item{
+    font-weight: 700;
+    color:white;
 }
 </style>
