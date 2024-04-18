@@ -1,28 +1,26 @@
 <template>
-    <div class="container py-4">
-        <RouterView></RouterView>
-        <IssuBadge></IssuBadge>
+    <div>
+        나의 당근
     </div>
+    <button>회원가입</button>
 </template>
 
 <script>
-import IssuBadge from '@/components/IssuBadge.vue'
 import { reactive, toRefs } from 'vue'
 
 export default {
-    setup() {
+    setup () {
         const state = reactive({
             count: 0,
         })
-
+    
         return {
             ...toRefs(state),
         }
-    },
-    components:{
-        IssuBadge
     }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>

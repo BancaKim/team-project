@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
+import MyPageView from '@/views/MyPageView.vue'
+import MyAreaView from '@/views/MyAreaView.vue'
 import PostCreateView from '@/views/posts/PostCreateView.vue'
 import PostDetailView from '@/views/posts/PostDetailView.vue'
 import PostEditView from '@/views/posts/PostEditView.vue'
@@ -17,6 +19,14 @@ const routes = [
     name: 'about',
     component: AboutView
   },
+   {
+    path: '/myarea',
+    component: MyAreaView
+  },
+  {
+    path: '/mypage',
+    component: MyPageView
+  },
   {
     path: '/posts',
     component: PostListView
@@ -32,7 +42,7 @@ const routes = [
    {
     path: '/posts/:id/edit',
     component: PostEditView
-  },
+  }
 ]
 
 const router = createRouter({

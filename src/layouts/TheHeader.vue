@@ -1,31 +1,37 @@
 <template>
-    <div>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <div class="inner">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-custom">
+
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">감자마켓</a>
+                <img src="@/assets/potato_brand.png" id="potatologo" alt="STARBUCKS">
+                <!-- <a class="navbar-brand" href="#">감자마켓</a> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <router-link class="nav-link active" to="/">Home</router-link>
+                            <router-link class="nav-link active" to="/">홈</router-link>
                             <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" to="/about">About</router-link>
+                            <router-link class="nav-link" to="/posts">동네생활</router-link>
                             <!-- <a class="nav-link" href="#">Link</a> -->
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" to="/posts">우리동네</router-link>
+                            <router-link class="nav-link" to="/about">내 근처</router-link>
+                            <!-- <a class="nav-link" href="#">Link</a> -->
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/mypage">나의당근</router-link>
                             <!-- <a class="nav-link" href="#">Link</a> -->
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Dropdown
+                                나의당근
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
@@ -36,13 +42,15 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <input class="form-control me-2" type="search" placeholder="물품이나 동네를 검색해보세요"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">
+                            <span class="material-symbols-outlined"> <!--검색 돋보기-->
+                                search
+                            </span>
+                        </button>
                     </form>
                     <!-- <div class="d-flex" role="search">
                         <button class="btn btn-outline-success" type="button" @click="goPage">글쓰기</button>
@@ -62,7 +70,26 @@
 </script>
 
 <style scoped>
-.nav.navbar.navbar-expand-sm.navbar-dark.bg-primary {
-    background-color: orange;
+#potatologo{
+    height:100px;
+}
+.inner{
+    font-size : 30px;
+    font-family: "Nanum Gothic",
+        sans-serif;
+}
+.bg-custom{
+    background-color:#ff8c00
+    ;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 100px;
+    /* 오른쪽 간격 조정 */
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+    /* 마지막 요소는 오른쪽 간격 제거 */
 }
 </style>

@@ -1,4 +1,5 @@
 <template>
+  <TheTop></TheTop>
   <TheHeader></TheHeader>
   <TheView></TheView>
 </template>
@@ -6,6 +7,7 @@
 <script setup>
 import TheHeader from '@/layouts/TheHeader.vue';
 import TheView from '@/layouts/TheView.vue';
+import TheTop from '@/layouts/TheTop.vue';
 </script>
 <style>
 #app {
