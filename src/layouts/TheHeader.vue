@@ -44,7 +44,7 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="물품이나 동네를 검색해보세요"
+                        <input class="form-control me-3" type="search" placeholder="물품이나 동네를 검색해보세요"
                             aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">
                             <span class="material-symbols-outlined"> <!--검색 돋보기-->
@@ -91,5 +91,9 @@
 .navbar-nav .nav-item:last-child {
     margin-right: 0;
     /* 마지막 요소는 오른쪽 간격 제거 */
+}
+
+.form-control.me-3{
+    width: 400px;
 }
 </style>
