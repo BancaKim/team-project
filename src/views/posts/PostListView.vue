@@ -15,11 +15,18 @@
             </AppCard>
             </div>
         </div>
+        <hr class="my-4">
+        <AppCard2> 
+            <PostDetailView :id="1"></PostDetailView>
+        </AppCard2>
+
     </div>
 </template>
 
 <script setup>
 import AppCard from '@/components/AppCard.vue';
+import PostDetailView from  '@/views/posts/PostDetailView.vue';
+import AppCard2 from '@/components/AppCard2.vue';
 import {getPosts} from '@/api/posts'
 import { useRouter } from 'vue-router';
 import {ref} from 'vue';

@@ -10,6 +10,9 @@ import PostListView from '@/views/posts/PostListView.vue'
 import NoticeCom from '@/components/NoticeCom.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
 import NestedView from '@/views/nested/NestedView.vue'
+import NestedOneView from '@/views/nested/NestedOneView.vue'
+import NestedTwoView from '@/views/nested/NestedTwoView.vue'
+import NestedHomeView from  '@/views/nested/NestedHomeView.vue'
 
 const routes = [
   {
@@ -46,7 +49,9 @@ const routes = [
     //  /user/tom
     path: '/posts/:id',
     name:"PostDetail",
-    component: PostDetailView
+    component: PostDetailView,
+    // props : true
+    props: route => ({id:parseInt(route.params.id)}),
   },
    {
     path: '/posts/:id/edit',
@@ -64,7 +69,18 @@ const routes = [
     ,
     {path: '/nested', 
     name:'Nested', 
-    component: NestedView},
+    component: NestedView,
+    children:[
+       {path: '', 
+    name:'NestedHome', 
+    component: NestedHomeView},
+         {path: '/nested/one', 
+    name:'NestedOne', 
+    component: NestedOneView},
+    {path: '/nested/two', 
+    name:'NestedTwo', 
+    component: NestedTwoView}
+    ]},
 ];
 
 const router = createRouter({
