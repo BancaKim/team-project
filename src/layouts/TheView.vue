@@ -1,5 +1,5 @@
 <template>
-    <div class="container py-4">
+    <div class="container">
         <RouterView></RouterView>
         <IssuBadge></IssuBadge>
     </div>
@@ -25,4 +25,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.container {
+    display: flex;
+    flex-direction: column;
+}
+</style>

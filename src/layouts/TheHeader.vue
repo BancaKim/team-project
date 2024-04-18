@@ -75,7 +75,7 @@
 }
 .inner{
     font-size : 30px;
-    font-family: "Nanum Gothic",
+    font-family: 'BMJUA',
         sans-serif;
 }
 .bg-custom{

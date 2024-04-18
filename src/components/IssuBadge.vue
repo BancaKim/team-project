@@ -56,6 +56,8 @@ export default {
     position: absolute;
     top: 200px;
     right: 12px;
+    display: flex;
+    flex-direction: column;
 }
 
 .badges .badge {

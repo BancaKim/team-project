@@ -1,8 +1,6 @@
 <template>
     <header>
         <div class="inner">
-            <a href="/" class="logo">
-            </a>
             <div class="sub-menu">
                 <ul class="menu">
                     <li>
@@ -38,35 +36,9 @@ export default {
 
 <style scoped>
 .inner {
-    /* background-color:blue; */
-    /* width: 1100px; */
     height: 50px;
     margin: 0 auto;
     position: relative;
-}
-
-/* header {
-    width: 100%;
-    background-color: #f6f5f0;
-    border-bottom: 1px solid #c8c8c8; */
-    /* position: relative; */
-    /* position: fixed;
-    top: 0;
-    z-index: 9;
-} */
-
-/* header>.inner {
-    height: 120px;
-} */
-
-
-header .logo {
-    height: 60px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index : 10;
 }
 
 header .sub-menu {
@@ -78,9 +50,8 @@ header .sub-menu {
 }
 
 header .sub-menu ul.menu {
-    /* background-color: black; */
-    font-family: Arial, sans-serif;
     display: flex;
+
 }
 
 header .sub-menu ul.menu li {
@@ -89,25 +60,26 @@ header .sub-menu ul.menu li {
 } 
 
 
-/* header .sub-menu ul.menu li::before {
+header .sub-menu ul.menu li::before {
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 1px;
+    height: 20px;
     background-color: #e5e5e5;
     position: absolute;
     top: 0;
     bottom: 0;
     margin: auto 0;
-} */
 
-/* header .sub-menu ul.menu li:first-child::before {
+}
+
+header .sub-menu ul.menu li:first-child::before {
     display: none;
-} */
-/*
+}
+
 header .sub-menu ul.menu li a {
-    font-size: 12px;
-    padding: 11px 16px;
+    font-size: 20px;
+    padding: 0px 16px;
     display: block;
     color: #656565;
 
@@ -115,6 +87,6 @@ header .sub-menu ul.menu li a {
 
 header .sub-menu ul.menu li a:hover {
     color: #000;
-} */ 
+} 
 
 </style>
