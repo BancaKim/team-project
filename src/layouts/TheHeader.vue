@@ -25,13 +25,23 @@
                             <!-- <a class="nav-link" href="#">Link</a> -->
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" to="/mypage">나의당근</router-link>
+                            <router-link class="nav-link" to="/mypage">나의감자</router-link>
                             <!-- <a class="nav-link" href="#">Link</a> -->
                         </li>
+                        <!--게시글-->
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/posts">게시글</router-link>
+                            <!-- <a class="nav-link" href="#">Link</a> -->
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/nested">Nested</router-link>
+                            <!-- <a class="nav-link" href="#">Link</a> -->
+                        </li>
+                        <!--게시글-->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                나의당근
+                                나의감자
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>

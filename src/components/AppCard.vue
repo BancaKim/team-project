@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="card" style="width: 18rem;">
         <img src="@/assets/macpro.png" class="card-img-top" alt="macpro">
         <div class="card-body">
             <!-- type : news, notice -->
@@ -8,7 +8,9 @@
             <p class="card-text">{{ contents }}</p>
             <a href="#" class="btn" :class="isLikeClass" @click="toggleLike">좋아요</a>
 
-        </div>
+            <p class="text-muted">{{ createdAt }}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
     </div>
 </template>
 
@@ -34,6 +36,9 @@ export default {
         isLike: {
             type: Boolean,
             default: false
+        },
+        createdAt: {
+            type : [String, Date, Number],
         },
         obj: {
             type: Object,
